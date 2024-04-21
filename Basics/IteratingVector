@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+    std::vector<int> vec = { 1 , 2 , 3 , 4 };
+    
+    // iterating using for loop
+    for(int i=0; i<vec.size(); i++){
+        cout << vec[i] << endl;
+    }
+    
+    //iterating using for each loop
+    for(auto ele : vec){
+        cout << ele << endl;
+    }
+    
+    //itrating using iterator
+    //we always use a dereference(*) operator with iterators
+    // because iterators are similar to pointers in that they point to elements in a container
+
+    for(auto it = vec.begin(); it!=vec.end(); it++){
+        cout << *it << endl;
+    }
+
+
+    std::vector<std::vector<int>> matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    // Using nested loops
+    for (int i = 0; i < matrix.size(); ++i) {
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    // Using range-based for loop
+    for (const auto& row : matrix) {
+        for (int value : row) {
+            std::cout << value << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    // Using nested loops and iterators
+    for (auto it = matrix.begin(); it != matrix.end(); ++it) {
+        for (auto nested_it = it->begin(); nested_it != it->end(); ++nested_it) {
+            std::cout << *nested_it << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
