@@ -2,7 +2,7 @@ Using const auto& in a range-based for loop is a common practice in C++ for iter
 
 Here's a breakdown of each part:
 
-## const
+__ const __
 This indicates that the elements are constant and cannot be modified inside the loop. 
 It ensures that you don't accidentally change the elements while iterating over them, which can be helpful for preventing bugs and ensuring code clarity.
 
