@@ -1,0 +1,17 @@
+#include<iostream>
+#include<list>
+using namespace std;
+
+int main() {
+    std::list<int> myList = { 1 , 2 , 3 , 4 };
+    for(auto it = myList.begin();  it!=myList.end(); it++){
+        cout << *it << " ";
+    }
+
+    cout << endl << endl;
+
+    for(int ele : myList){
+        cout << ele << " ";
+    }
+    return 0;
+}
